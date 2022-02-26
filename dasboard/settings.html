@@ -8,7 +8,6 @@
     <title>Mr. ARTHUR JUNIOR</title>
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="responsiveness.css">
-    <script src="articles.css"></script>
 </head>
 
 <body>
@@ -34,7 +33,7 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="./articles.html"><img src="../images/grommet-icons_article.png" alt="" srcset="">
                         <p>Articles</p>
                     </a>
@@ -59,7 +58,7 @@
                         <p>Queries/Questions</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="./settings.html"><img src="../images/settings.png" alt="" srcset="">
                         <p>Settings</p>
                     </a>
@@ -81,78 +80,13 @@
     <div class="rightside">
 
     </div>
-
-    <h1 class="heading">Articles</h1>
-    <div class="head">
-        <a href="./newarticles.html"><button class="add">Add Article</button></a>
-        <input type="text" placeholder="Search">
-        <button class="search">Search</button>
-    </div>
-    <div class="menu2">
-        <ul>
-            <li>Date</li>
-            <li>Status</li>
-            <li>Titles</li>
-            <li>Action</li>
-        </ul>
-        <hr>
-    </div>
-    <div class="menu2">
-        <ul>
-            <li>09-02-2022</li>
-            <li>Published</li>
-            <li>Another articles</li>
-            <li><button style="background-color: black;">Delete</button><button style="background-color:black;" class="edit">Edit</button></li>
-        </ul>
-        <hr>
-        <ul>
-            <li>09-02-2022</li>
-            <li>Published</li>
-            <li>Another articles</li>
-            <li><button style="background-color: black;">Delete</button><button style="background-color: black;" class="edit">Edit</button></li>
-        </ul>
-        <hr>
-        <ul>
-            <li>09-02-2022</li>
-            <li>Published</li>
-            <li>Another articles</li>
-            <li><button style="background-color: black;">Delete</button><button style="background-color:black;" class="edit">Edit</button></li>
-        </ul>
-        <hr>
-        <ul>
-            <li>09-02-2022</li>
-            <li>Published</li>
-            <li>Another articles</li>
-            <li><button style="background-color: black;">Delete</button><button style="background-color:black;" class="edit">Edit</button></li>
-        </ul>
-        <hr>
-        <ul>
-            <li>09-02-2022</li>
-            <li>Published</li>
-            <li>Another articles</li>
-            <li><button style="background-color: black;">Delete</button><button style="background-color:black;" class="edit">Edit</button></li>
-        </ul>
-        <hr>
-        <ul>
-            <li>09-02-2022</li>
-            <li>Published</li>
-            <li>Another articles</li>
-            <li><button style="background-color: black;">Delete</button><button style="background-color:black;" class="edit">Edit</button></li>
-        </ul>
-        <hr>
-        <ul>
-            <li>09-02-2022</li>
-            <li>Published</li>
-            <li>Another articles</li>
-            <li><button style="background-color: black;">Delete</button><button style="background-color:black;" class="edit">Edit</button></li>
-        </ul>
-        <hr>
-    </div>
+    <h1 class="heading">Settings</h1>
     <script>
         async function getProfile() {
             let user = localStorage.getItem('user');
             if (!user) return window.location.href = "./index.html ";
             user = JSON.parse(user);
+
 
             document.getElementById('first_name').innerHTML = "Arthur";
             document.getElementById('last_name').innerHTML = "Junior";

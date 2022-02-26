@@ -17,8 +17,8 @@
                 <img src="../images/218005602.jpg" alt="arthur">
             </div>
             <div class="info">
-                <h1 id="first_name ">arthurjunior</h1>
-                <p id="email ">.</p>
+                <h4><b id="first_name"></b> <b id="last_name"></b></h4>
+                <p id="email"></p>
                 <img src="../images/online.png" srcset="">
             </div>
 
@@ -53,6 +53,16 @@
                         <p>Subscribes</p>
                     </a>
                 </li>
+                <li>
+                    <a href="./queries.html"><img src="../images/question.png" alt="" srcset="">
+                        <p>Queries/Questions</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./settings.html"><img src="../images/settings.png" alt="" srcset="">
+                        <p>Settings</p>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="user">
@@ -71,6 +81,67 @@
 
     </div>
     <h1 class="heading">Subscribes</h1>
+    <div class="menu2">
+        <ul>
+            <li>Subscribers <br><input type="checkbox">Unsubscribe All</li>
+            <li>Email</li>
+            <li>Date</li>
+            <li>ID</li>
+        </ul>
+        <hr>
+    </div>
+    <div class="menu2">
+        <ul>
+
+            <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
+            <li>Another@gmail.com</li>
+            <li style="margin-right: 50px;">02-02-2022</li>
+            <li>1</li>
+        </ul>
+        <hr>
+        <ul>
+            <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
+            <li>Another@gmail.com</li>
+            <li style="margin-right: 50px;">02-02-2022</li>
+            <li>2</li>
+        </ul>
+        <hr>
+        <ul>
+            <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
+            <li>Another@gmail.com</li>
+            <li style="margin-right: 50px;">02-02-2022</li>
+            <li>3</li>
+        </ul>
+        <hr>
+        <ul>
+            <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
+            <li>Another@gmail.com</li>
+            <li style="margin-right: 50px;">02-02-2022</li>
+            <li>4</li>
+        </ul>
+        <hr>
+        <ul>
+            <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
+            <li>Another@gmail.com</li>
+            <li style="margin-right: 50px;">02-02-2022</li>
+            <li>5</li>
+        </ul>
+        <hr>
+        <ul>
+            <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
+            <li>Another@gmail.com</li>
+            <li style="margin-right: 50px;">02-02-2022</li>
+            <li>6</li>
+        </ul>
+        <hr>
+        <ul>
+            <li>arthur junior<br><input type="checkbox">Unsubscribe</li>
+            <li>Another@gmail.com</li>
+            <li style="margin-right: 50px;">02-02-2022</li>
+            <li>7</li>
+        </ul>
+        <hr>
+    </div>
     <script>
         async function getProfile() {
             let user = localStorage.getItem('user');
@@ -78,7 +149,8 @@
             user = JSON.parse(user);
 
 
-            document.getElementById('first_name').innerHTML = "arthurjunior";
+            document.getElementById('first_name').innerHTML = "Arthur";
+            document.getElementById('last_name').innerHTML = "Junior";
             document.getElementById('email').innerHTML = user.email;
 
 

@@ -210,46 +210,10 @@
                 <h1>BLOGS</h1>
                 <div class="line"></div>
             </div>
-            <section class="card">
-                <div class="blog-sect">
-                    <img src="./images/blog.png" alt="blog">
-                    <a href="./blogs/blog.html">
-                        <h1>BLOG NAME</h1>
-                    </a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cum earum illo impedit l aboriosam eligendi perspiciatis amet in molestias sapiente! Quod vel quas dignissimos eos similique ipsa ea nam laborum!</p>
+            <section class="card" id="blog__card">
 
-                    <div class="emoji1">
-                        <img src="./images/comment.png" alt="" srcset="">
-                        <img src="./images/like.png" alt="" srcset="">
-                    </div>
-                </div>
-                <div class="blog-sect">
-                    <img src="./images/blog.png" alt="blog">
-                    <a href="./blogs/blog.html">
-                        <h1>BLOG NAME</h1>
-                    </a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cum earum illo impedit l aboriosam eligendi perspiciatis amet in molestias sapiente! Quod vel quas dignissimos eos similique ipsa ea nam laborum!</p>
-
-                    <div class="emoji1">
-                        <img src="./images/comment.png" alt="" srcset="">
-                        <img src="./images/like.png" alt="" srcset="">
-                    </div>
-                </div>
-                <div class="blog-sect">
-                    <img src="./images/blog.png" alt="blog">
-                    <a href="./blogs/blog.html">
-                        <h1>BLOG NAME</h1>
-                    </a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae cum earum illo impedit l aboriosam eligendi perspiciatis amet in molestias sapiente! Quod vel quas dignissimos eos similique ipsa ea nam laborum!</p>
-
-                    <div class="emoji1">
-                        <img src="./images/comment.png" alt="" srcset="">
-
-                        <img src="./images/like.png" alt="" srcset="">
-                    </div>
-                </div>
             </section>
-            <img src="./images/next.png" alt="next" srcset="" class="next">
+            <a href="./blogs/allblog.html"><img src="./images/next.png" alt="next" srcset="" class="next"></a>
         </div>
     </section>
     <section class="contactme container" id="contacts">
@@ -259,7 +223,7 @@
         </div>
         <div class="address">
             <div class="form">
-                <form action="javascript:sendmail()" method="post">
+                <form>
 
                     <input type="text" placeholder="Enter Your name.." required="" id="contact-name" onkeyup='validateName()'>
                     <span class='error-message' id='name-error'></span>
@@ -267,11 +231,11 @@
                     <input type="text" placeholder="Enter Your Email.." required="" id="contact-email" onkeyup='validateEmail()'>
                     <span class='error-message' id='email-error'></span>
 
-                    <textarea placeholder="Leave Your Message.." style="height:200px" required="" id='contact-message' onkeyup='validateMessage()'></textarea>
+                    <textarea placeholder="Leave Your Message.." style="height:200px" required="" id='contact-message'></textarea>
                     <span class='error-message' id='message-error'></span>
 
-                    <input type="submit" value="Send" onclick='return validateForm()'>
-                    <span class='error-message' id='submit-error'></span>
+                    <button type="submit" id="submit" onclick='return validateForm()'>Submit</button>
+                    <br<span class='error-message' id='submit-error'></span>
 
                 </form>
             </div>
@@ -327,7 +291,7 @@
                 </div>
                 <div class="newsletter">
                     <p>Subscribe to my newsletter</p>
-                    <input type="text" placeholder="Enter Your Email.."><br>
+                    <input type="text" placeholder="Enter Your Email.." required=""><br>
                     <button>Subscribe!</button>
                 </div>
             </div>
@@ -335,14 +299,21 @@
             <a href="#home"><img src="./images/home.png" alt="" srcset="" class="home"></a>
         </div>
     </section>
-    <script src="app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+    <script defer src="app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
 
-    <script src="./scripts/firebase.js"></script>
+    <!-- <script src="./scripts/firebase.js"></script>
     <script src="./scripts/auth.js"></script>
-    <script src="./validation.js"></script>
+    <script src="./validation.js"></script> -->
+    <script defer src="./configuration.js"></script>
+    <script defer src="./comment.js"></script>
+    <script defer src="./validation.js"></script>
+    <script defer src="./form.js"></script>
+    <script defer src="./showBlogs.js"></script>
 </body>
 
 </html>

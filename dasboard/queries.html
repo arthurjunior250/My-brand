@@ -8,10 +8,9 @@
     <title>Mr. ARTHUR JUNIOR</title>
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="responsiveness.css">
-    <script src="articles.css"></script>
 </head>
 
-<body>
+<body onload="getalldataonce() ">
     <div class="container">
         <div class="profile">
             <div class="card">
@@ -34,7 +33,7 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="./articles.html"><img src="../images/grommet-icons_article.png" alt="" srcset="">
                         <p>Articles</p>
                     </a>
@@ -54,7 +53,7 @@
                         <p>Subscribes</p>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="./queries.html"><img src="../images/question.png" alt="" srcset="">
                         <p>Queries/Questions</p>
                     </a>
@@ -81,70 +80,20 @@
     <div class="rightside">
 
     </div>
-
-    <h1 class="heading">Articles</h1>
-    <div class="head">
-        <a href="./newarticles.html"><button class="add">Add Article</button></a>
-        <input type="text" placeholder="Search">
-        <button class="search">Search</button>
-    </div>
+    <h1 class="heading">Queries/Questions</h1>
     <div class="menu2">
         <ul>
-            <li>Date</li>
-            <li>Status</li>
-            <li>Titles</li>
-            <li>Action</li>
+            <li>Names</li>
+            <li>Email</li>
+            <li>Queries/Questions</li>
         </ul>
         <hr>
     </div>
     <div class="menu2">
         <ul>
-            <li>09-02-2022</li>
-            <li>Published</li>
-            <li>Another articles</li>
-            <li><button style="background-color: black;">Delete</button><button style="background-color:black;" class="edit">Edit</button></li>
-        </ul>
-        <hr>
-        <ul>
-            <li>09-02-2022</li>
-            <li>Published</li>
-            <li>Another articles</li>
-            <li><button style="background-color: black;">Delete</button><button style="background-color: black;" class="edit">Edit</button></li>
-        </ul>
-        <hr>
-        <ul>
-            <li>09-02-2022</li>
-            <li>Published</li>
-            <li>Another articles</li>
-            <li><button style="background-color: black;">Delete</button><button style="background-color:black;" class="edit">Edit</button></li>
-        </ul>
-        <hr>
-        <ul>
-            <li>09-02-2022</li>
-            <li>Published</li>
-            <li>Another articles</li>
-            <li><button style="background-color: black;">Delete</button><button style="background-color:black;" class="edit">Edit</button></li>
-        </ul>
-        <hr>
-        <ul>
-            <li>09-02-2022</li>
-            <li>Published</li>
-            <li>Another articles</li>
-            <li><button style="background-color: black;">Delete</button><button style="background-color:black;" class="edit">Edit</button></li>
-        </ul>
-        <hr>
-        <ul>
-            <li>09-02-2022</li>
-            <li>Published</li>
-            <li>Another articles</li>
-            <li><button style="background-color: black;">Delete</button><button style="background-color:black;" class="edit">Edit</button></li>
-        </ul>
-        <hr>
-        <ul>
-            <li>09-02-2022</li>
-            <li>Published</li>
-            <li>Another articles</li>
-            <li><button style="background-color: black;">Delete</button><button style="background-color:black;" class="edit">Edit</button></li>
+            <li id="user-name">arthur junior</li>
+            <li id="user-email">Published@gmail.com</li>
+            <li id="user-message">hey,how are you?</li>
         </ul>
         <hr>
     </div>
@@ -153,6 +102,7 @@
             let user = localStorage.getItem('user');
             if (!user) return window.location.href = "./index.html ";
             user = JSON.parse(user);
+
 
             document.getElementById('first_name').innerHTML = "Arthur";
             document.getElementById('last_name').innerHTML = "Junior";
@@ -171,14 +121,17 @@
             });
         }
         getProfile();
+
+
+
+        // ............................queries.......................
     </script>
-
-
 
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js "></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js "></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js "></script>
     <script src="./scripts/firebase.js "></script>
+    <script src="../comment.js"></script>
 
 </body>
 
